@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NovaTransferenciaComponent } from './nova-transferencia.component';
+import { NewTransferComponent } from './new-transfer.component';
 
-describe('NovaTransferenciaComponent', () => {
-  let component: NovaTransferenciaComponent;
-  let fixture: ComponentFixture<NovaTransferenciaComponent>;
+describe('NewTransferComponent', () => {
+  let component: NewTransferComponent;
+  let fixture: ComponentFixture<NewTransferComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NovaTransferenciaComponent ]
+      declarations: [ NewTransferComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NovaTransferenciaComponent);
+    fixture = TestBed.createComponent(NewTransferComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
