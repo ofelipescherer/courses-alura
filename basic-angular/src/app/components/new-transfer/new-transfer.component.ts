@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { TransferService } from 'src/app/services/transfer.service';
 
 @Component({
@@ -12,7 +13,10 @@ export class NewTransferComponent implements OnInit {
   value: number | undefined;
   account: number | undefined;
 
-  constructor(private serviceTransfer: TransferService) {}
+  constructor(
+    private serviceTransfer: TransferService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {}
 
@@ -27,6 +31,7 @@ export class NewTransferComponent implements OnInit {
         () => {
           this.value = 0;
           this.account = 0;
+          this.router.navigateByUrl('extract');
         },
         (error) => {
           console.log(error);
