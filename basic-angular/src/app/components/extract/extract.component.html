@@ -1,0 +1,14 @@
+<table class="table">
+  <thead class="table__header">
+    <th class="table__header_content">Date</th>
+    <th class="table__header_content">Value</th>
+    <th class="table__header_content">Account</th>
+  </thead>
+  <tbody>
+    <tr class="table__row" *ngFor="let transfer of transfers">
+      <td class="table__content">{{ transfer?.date | date: "sort"}}</td>
+      <td class="table__content">{{ transfer?.value | currency }}</td>
+      <td class="table__content">{{ transfer.account }}</td>
+    </tr>
+  </tbody>
+</table>

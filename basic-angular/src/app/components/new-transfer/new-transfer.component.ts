@@ -16,6 +16,10 @@ export class NewTransferComponent implements OnInit {
   ngOnInit(): void {}
 
   transfer(): void {
-    this.onTransfer.emit({ value: this.value, account: this.account });
+    this.onTransfer.emit({
+      date: new Date(),
+      value: this.value,
+      account: this.account,
+    });
   }
 }

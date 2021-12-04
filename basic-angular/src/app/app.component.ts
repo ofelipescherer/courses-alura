@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'basic-angular';
-  transfer: any = {};
+  transfers: any[] = [];
 
   transferValues($event: any) {
-    this.transfer = $event;
+    this.transfers = $event;
   }
 }

@@ -1,4 +1,3 @@
 <app-new-transfer (onTransfer)="transferValues($event)"></app-new-transfer>
 
-<p>{{ transfer?.value }}</p>
-<p>{{ transfer.account }}</p>
+<app-extract [transfers]="transfers" ></app-extract>
