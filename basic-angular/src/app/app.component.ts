@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TransferService } from './services/transfer.service';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'basic-angular';
-  transfers: any[] = [];
+
+  constructor(private transferService: TransferService) {}
 
   transferValues($event: any) {
-    this.transfers = $event;
+    this.transferService.addTransfer($event);
   }
 }
