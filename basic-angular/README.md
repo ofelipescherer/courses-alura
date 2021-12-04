@@ -9,7 +9,7 @@ We build a simple project to simulate bank transfer.
 # Learned :clipboard:
 
 - Create Angular project;
-- Crteate Angular component;
+- Create Angular component;
 - Create Angular service;
 - Create Angular routes;
 - Create fake REST API;
