@@ -9,9 +9,5 @@ import { TransferService } from './services/transfer.service';
 export class AppComponent {
   title = 'basic-angular';
 
-  constructor(private transferService: TransferService) {}
-
-  transferValues($event: any) {
-    this.transferService.addTransfer($event);
-  }
+  constructor() {}
 }

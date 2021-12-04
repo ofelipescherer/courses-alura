@@ -12,6 +12,8 @@ export class ExtractComponent implements OnInit {
   constructor(private transferService: TransferService) {}
 
   ngOnInit(): void {
-    this.transfers = this.transferService.transfers;
+    this.transferService.getAllTransfers().subscribe((val) => {
+      this.transfers = val;
+    });
   }
 }
