@@ -5,7 +5,7 @@
  #loginForm="ngForm"
  >
   <div class="form-group">
-    <input class="form-control" placeholder="nome do usuário" 
+    <input class="form-control" placeholder="User name" 
     [(ngModel)]="user"
     name="user"
     #userField="ngModel"
@@ -35,5 +35,7 @@
     [disabled]="loginForm.invalid"
     type="submit"
     class="btn btn-primary btn-block"
-  >Entrar</button>
+  >Sign in</button>
 </form>
+
+<p>Is not a user? <a [routerLink]="['new-user']">Create account</a></p>
