@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { minValidator } from './min.validator';
 import { NewUser } from './new-user';
 import { NewUserService } from './new-user.service';
+import { UserExistsService } from './user-exists.service';
 
 @Component({
   selector: 'app-new-user',
@@ -14,12 +15,17 @@ export class NewUserComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private newUserService: NewUserService
+    private newUserService: NewUserService,
+    private userExistService: UserExistsService
   ) {}
 
   ngOnInit(): void {
     this.newUserForm = this.formBuilder.group({
-      userName: ['', [Validators.required, minValidator]],
+      userName: [
+        '',
+        [Validators.required, minValidator],
+        [this.userExistService.userExists()],
+      ],
       email: ['', [Validators.required, Validators.email]],
       fullName: ['', [Validators.required, Validators.maxLength(4)]],
       password: ['', [Validators.required]],
@@ -29,5 +35,9 @@ export class NewUserComponent implements OnInit {
   newAccount() {
     const newUser = this.newUserForm.getRawValue() as NewUser;
     console.log(newUser);
+  }
+
+  getFoRM() {
+    console.log(this.newUserForm);
   }
 }
