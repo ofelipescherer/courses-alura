@@ -4,6 +4,7 @@ import { minValidator } from './min.validator';
 import { NewUser } from './new-user';
 import { NewUserService } from './new-user.service';
 import { UserExistsService } from './user-exists.service';
+import { userPasswordValidator } from './user-password.validator';
 
 @Component({
   selector: 'app-new-user',
@@ -20,24 +21,25 @@ export class NewUserComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.newUserForm = this.formBuilder.group({
-      userName: [
-        '',
-        [Validators.required, minValidator],
-        [this.userExistService.userExists()],
-      ],
-      email: ['', [Validators.required, Validators.email]],
-      fullName: ['', [Validators.required, Validators.maxLength(4)]],
-      password: ['', [Validators.required]],
-    });
+    this.newUserForm = this.formBuilder.group(
+      {
+        userName: [
+          '',
+          [Validators.required, minValidator],
+          [this.userExistService.userExists()],
+        ],
+        email: ['', [Validators.required, Validators.email]],
+        fullName: ['', [Validators.required, Validators.maxLength(4)]],
+        password: ['', [Validators.required]],
+      },
+      {
+        validators: [userPasswordValidator],
+      }
+    );
   }
 
   newAccount() {
     const newUser = this.newUserForm.getRawValue() as NewUser;
     console.log(newUser);
-  }
-
-  getFoRM() {
-    console.log(this.newUserForm);
   }
 }

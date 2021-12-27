@@ -36,7 +36,6 @@
       *ngIf="newUserForm.get('userName')?.errors?.userExists"
       message="User already exists"
     ></app-message>
-    <button (click)="getFoRM()">get</button>
   </div>
 
   <div class="form-group">
@@ -46,6 +45,10 @@
       type="password"
       formControlName="password"
     />
+    <app-message 
+    *ngIf="newUserForm.errors?.passwordEqualUser"
+    message="User and passwords cannot be equal"
+  ></app-message>
   </div>
 
   <button class="btn btn-primary btn-block">Create account</button>
