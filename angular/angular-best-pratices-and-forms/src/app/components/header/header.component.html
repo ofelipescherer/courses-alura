@@ -1,6 +1,6 @@
 <header class="sticky-top">
   <nav class="navbar navbar-light bg-white">
-    <a class="navbar-brand">Animal Wiki</a>
+    <a class="navbar-brand ml-1">Animal Wiki</a>
     <div *ngIf="user$ | async as user">
       <div *ngIf="user.name; else login" class="custom-row-container">
         <i class="fa fa-user-circle mr-1"></i>
