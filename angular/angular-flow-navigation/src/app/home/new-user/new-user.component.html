@@ -1,0 +1,57 @@
+<h4 class="text-center">Register and show your pet to world</h4>
+
+
+<form class="form mt-4 custom-form-container" [formGroup]="newUserForm" (submit)="newAccount()">
+  <div class="form-group">
+    <input placeholder="email" class="form-control" formControlName="email"/>
+    <app-message 
+      *ngIf="newUserForm.get('email')?.errors?.required && 
+      newUserForm.get('email')?.touched"
+      message="Email required"
+    ></app-message>
+    <app-message 
+    *ngIf="newUserForm.get('email')?.errors?.email && 
+    newUserForm.get('email')?.touched"
+    message="Email not valid"
+  ></app-message>
+  </div>
+
+  <div class="form-group">
+    <input placeholder="Full Name" class="form-control" formControlName="fullName" />
+    <app-message 
+    *ngIf="newUserForm.get('fullName')?.errors && 
+    newUserForm.get('fullName')?.touched"
+    message="Incorrect name"
+  ></app-message>
+  </div>
+
+  <div class="form-group">
+    <input placeholder="User name" class="form-control" formControlName="userName" />
+    <app-message 
+      *ngIf="newUserForm.get('userName')?.errors?.lowerCase && 
+      newUserForm.get('userName')?.touched"
+      message="User must be lower case"
+    ></app-message>
+    <app-message 
+      *ngIf="newUserForm.get('userName')?.errors?.userExists"
+      message="User already exists"
+    ></app-message>
+  </div>
+
+  <div class="form-group">
+    <input
+      placeholder="Password"
+      class="form-control"
+      type="password"
+      formControlName="password"
+    />
+    <app-message 
+    *ngIf="newUserForm.errors?.passwordEqualUser"
+    message="User and passwords cannot be equal"
+  ></app-message>
+  </div>
+
+  <button class="btn btn-primary btn-block">Create account</button>
+</form>
+
+<p>Already is a user? <a [routerLink]="['']">Sign in</a></p>
