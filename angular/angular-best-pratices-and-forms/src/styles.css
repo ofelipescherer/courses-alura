@@ -5,3 +5,11 @@
   flex-direction: column;
   gap: 0.5rem;
 }
+
+.custom-row-container {
+  display: flex;
+  gap: 0.2rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+}
