@@ -19,6 +19,7 @@ export class ListAnimalsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    //this is not a good practice
     // this.userService.returnUser().subscribe((user) => {
     //   const userName = user.name ?? ''; //Using this property javascript, we garant that this const will be string
     //   this.animalsService.listAnimal(userName).subscribe((animals) => {
@@ -26,6 +27,7 @@ export class ListAnimalsComponent implements OnInit {
     //   });
     // });
 
+    //this is a good practice
     this.animals$ = this.userService.returnUser().pipe(
       switchMap((user) => {
         const userName = user.name ?? '';
