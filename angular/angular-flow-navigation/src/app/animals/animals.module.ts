@@ -7,9 +7,10 @@ import { AnimalComponent } from './animal/animal.component';
 import { CardComponent } from '../components/card/card.component';
 import { CardModule } from '../components/card/card.module';
 import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
+import { CommentsComponent } from './animal-detail/comments/comments.component';
 
 @NgModule({
-  declarations: [ListAnimalsComponent, AnimalComponent, AnimalDetailComponent],
+  declarations: [ListAnimalsComponent, AnimalComponent, AnimalDetailComponent, CommentsComponent],
   imports: [CommonModule, AnimalsRoutingModule, CardModule],
 })
 export class AnimalsModule {}
