@@ -1,6 +1,6 @@
-<p class="text-center text-muted" *ngIf="!animals.length">Sorry, we don't have animals</p>
+<p class="text-center text-muted" *ngIf="!animals?.length">Sorry, we don't have animals</p>
 
-<div class="row">
+<div class="row" *ngIf="animals?.length">
   <div *ngFor="let animal of animals" class="col-4">
     <a [routerLink]="['/animals', animal.id]"></a>
       <app-card>

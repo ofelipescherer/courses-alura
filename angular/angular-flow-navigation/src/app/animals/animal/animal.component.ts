@@ -10,12 +10,14 @@ const API = environment.apiURL;
 })
 export class AnimalComponent implements OnInit {
   private originalUrl = '';
+
   @Input() description = '';
+
   @Input() set url(url: string) {
     if (url.startsWith('data')) {
       this.originalUrl = url;
     } else {
-      this.originalUrl = `${API}/img/${url}`;
+      this.originalUrl = `${API}/imgs/${url}`;
     }
   }
 
