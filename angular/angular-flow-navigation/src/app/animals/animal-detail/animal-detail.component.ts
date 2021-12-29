@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Animal } from '../animals';
 import { AnimalsService } from '../animals.service';
@@ -15,11 +15,29 @@ export class AnimalDetailComponent implements OnInit {
 
   constructor(
     private animalService: AnimalsService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
     this.animalId = this.activatedRoute.snapshot.params.animalId;
     this.animal$ = this.animalService.searchId(this.animalId);
+  }
+
+  like() {
+    this.animalService.likeAnimal(this.animalId).subscribe((like) => {
+      if (like) {
+        this.animal$ = this.animalService.searchId(this.animalId);
+      }
+    });
+  }
+
+  delete() {
+    this.animalService.deleteAnimal(this.animalId).subscribe(
+      () => {
+        this.router.navigate(['/animals/']);
+      },
+      (error) => console.log(error)
+    );
   }
 }
