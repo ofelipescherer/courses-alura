@@ -14,14 +14,10 @@ export class AnimalsService {
   constructor(private http: HttpClient, private tokenService: TokenService) {}
 
   listAnimal(userName: string): Observable<Animals> {
-    const token = this.tokenService.returnToken();
-    const headers = new HttpHeaders().append('x-access-token', token);
-    return this.http.get<Animals>(`${API}/${userName}/photos`, { headers });
+    return this.http.get<Animals>(`${API}/${userName}/photos`);
   }
 
   searchId(id: number): Observable<Animal> {
-    const token = this.tokenService.returnToken();
-    const headers = new HttpHeaders().append('x-access-token', token);
-    return this.http.get<Animal>(`${API}/photos/${id}`, { headers });
+    return this.http.get<Animal>(`${API}/photos/${id}`);
   }
 }

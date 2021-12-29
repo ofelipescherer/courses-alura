@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthenticatorModule } from './authenticator/authenticator.module';
 import { FooterModule } from './components/footer/footer.module';
 import { HeaderModule } from './components/header/header.module';
 
@@ -15,6 +16,7 @@ import { HeaderModule } from './components/header/header.module';
     HttpClientModule,
     HeaderModule,
     FooterModule,
+    AuthenticatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
