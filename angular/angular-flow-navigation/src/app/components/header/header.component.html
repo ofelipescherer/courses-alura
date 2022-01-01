@@ -1,6 +1,23 @@
 <header class="sticky-top">
   <nav class="navbar navbar-light bg-white">
-    <a class="navbar-brand ml-1">Animal Wiki</a>
+    <a class="navbar-brand ml-1">
+      <i 
+        class="fa fa-bars mr-2"
+        (click)="menu.openMenu()"
+        (keyup.space)="menu.openMenu()"
+        >
+        
+      </i>
+      Animal Wiki</a>
+
+    <app-menu #menu>
+      <ul class="list-unstyled">
+        <li>
+          <a [routerLink]="['animals', 'new']">New Animal</a>
+        </li>
+      </ul>
+    </app-menu>
+
     <div *ngIf="user$ | async as user">
       <div *ngIf="user.name; else login" class="custom-row-container">
         <i class="fa fa-user-circle mr-1"></i>
@@ -8,6 +25,8 @@
         <a (click)="logout()">Logout</a>
       </div>
     </div>
+
+
   </nav>
 
   <ng-template #login>
