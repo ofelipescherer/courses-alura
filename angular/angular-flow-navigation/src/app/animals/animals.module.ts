@@ -7,8 +7,8 @@ import { AnimalComponent } from './animal/animal.component';
 import { CardModule } from '../components/card/card.module';
 import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 import { CommentsComponent } from './animal-detail/comments/comments.component';
-import { MessageModule } from '../components/message/message.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     AnimalsRoutingModule,
     CardModule,
-    MessageModule,
+    SharedModule,
     ReactiveFormsModule,
   ],
 })

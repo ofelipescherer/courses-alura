@@ -13,7 +13,9 @@ import { CommentsService } from './comments.service';
 export class CommentsComponent implements OnInit {
   @Input() id!: number;
   comments$!: Observable<Comments>;
-  commentForm!: FormGroup;
+  commentForm: FormGroup = this.formBuilder.group({
+    comment: ['', Validators.maxLength(300)],
+  });
 
   constructor(
     private commentService: CommentsService,
@@ -22,9 +24,6 @@ export class CommentsComponent implements OnInit {
 
   ngOnInit(): void {
     this.comments$ = this.commentService.searchComment(this.id);
-    this.commentForm = this.formBuilder.group({
-      comment: ['', Validators.maxLength(300)],
-    });
   }
 
   save(): void {
@@ -33,7 +32,7 @@ export class CommentsComponent implements OnInit {
       switchMap(() => this.commentService.searchComment(this.id)),
       tap(() => {
         this.commentForm.reset();
-        alert('Comment saved');
+        alert('Salvo Comentário');
       })
     );
   }
