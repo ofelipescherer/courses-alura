@@ -9,6 +9,7 @@ import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 import { CommentsComponent } from './animal-detail/comments/comments.component';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NewAnimalComponent } from './new-animal/new-animal.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AnimalComponent,
     AnimalDetailComponent,
     CommentsComponent,
+    NewAnimalComponent,
   ],
   imports: [
     CommonModule,
