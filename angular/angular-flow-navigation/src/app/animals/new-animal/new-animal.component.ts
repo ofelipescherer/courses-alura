@@ -1,3 +1,4 @@
+import { HttpEvent, HttpEventType } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -35,7 +36,16 @@ export class NewAnimalComponent implements OnInit {
 
     this.animalsService
       .upload(description, allowComments, this.file)
-      .pipe(finalize(() => this.router.navigate(['animals'])));
+      .pipe(finalize(() => this.router.navigate(['animals'])))
+      .subscribe(
+        (event: HttpEvent<any>) => {
+          if (event.type === HttpEventType.UploadProgress) {
+            const total = event.total ?? 1;
+            this.percent = Math.round(100 * (event.loaded / total));
+          }
+        },
+        (error) => console.log(error)
+      );
   }
 
   saveFile(file: any): void {
