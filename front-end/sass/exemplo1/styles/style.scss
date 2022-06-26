@@ -1,3 +1,6 @@
+$primary: aqua;
+$secondary: cadetblue;
+
 body {
   margin: 0;
   padding: 0;
@@ -9,25 +12,25 @@ body {
 
   .esquerdo {
     width: 50%;
-    background-color: aqua;
+    background-color: $primary;
 
     .text {
       margin-top: 40%;
       text-align: center;
       font-size: 150px;
-      color: cadetblue;
+      color: $secondary;
     }
   }
 
   .direito {
     width: 50%;
-    background-color: cadetblue;
+    background-color: $secondary;
 
     .text {
       margin-top: 40%;
       text-align: center;
       font-size: 150px;
-      color: aqua;
+      color: $primary;
     }
   }
 }
