@@ -1,0 +1,36 @@
+$primary: aqua;
+$secondary: cadetblue;
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin text-color($background-color, $text-color) {
+  width: 50%;
+  background-color: $background-color;
+
+  .text {
+    margin-top: 40%;
+    text-align: center;
+    font-size: 150px;
+    color: $text-color;
+  }
+}
+
+body {
+  @include reset();
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+
+  .esquerdo {
+    @include text-color($secondary, $primary);
+  }
+
+  .direito {
+    @include text-color($primary, $secondary);
+  }
+}
