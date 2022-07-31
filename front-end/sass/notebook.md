@@ -67,3 +67,14 @@ Uma coisa incrível para se utilizar com o SASS são operações matemáticas co
 | @warn	| imprime um aviso sem parar totalmente a compilação. | 
 | @debug | imprime uma mensagem para fins de debugging. | 
 
+## If-Else
+
+Exemplo de como utilizar condicionais em SASS
+
+```
+@mixin bg-cores($lado, $cores...)
+    @if $lado == left
+        background: linear-gradient(to left, $cores)
+    @else 
+        background: linear-gradient(to right, $cores)
+```
