@@ -1,0 +1,35 @@
+## HTML
+
+## Tags Semantic
+
+### Title
+  ``` html
+   <h1>,<h2>,<h3>,etc...
+  ```
+
+### Paragraph
+  ``` html
+  <p>
+  ```
+
+### Highlight
+  ``` html
+  <em>, <strong>
+  ```
+
+## Structure
+
+
+``` html
+<!DOCTYPE html> <-- serve para informar ao navegador qual versão do HTML estamos usando.-->
+<html lang="pt-br">
+  <head> <-- Informações -->
+    <meta charset="UTF-8">
+    <title>TÍTULO DA PÁGINA</title>
+  </head>
+  <body> <-- Conteúdo -->
+
+  </body>
+
+</html>
+```
