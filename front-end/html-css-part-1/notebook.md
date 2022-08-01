@@ -22,6 +22,11 @@
   <ol> (ordenada), <ul> (ñ ordenada), <li>
   ```
 
+### Divisões
+  ```
+  <div>, <section>, <nav>, <header>
+  ```
+
 ## Structure
 
 
@@ -54,6 +59,12 @@
 | color | cor do texto |
 | padding | espaçamento |
 | margin | espaçamento |
+
+### Behaviours
+
+block: enche tudo, bloqueia todo o conteúdo da linha
+inline: tamnho do conteúdo
+block-inline: pega o tamanho inteiro da linha, mas somente o tamanho do conteúdo
 
 
 # Bonus
