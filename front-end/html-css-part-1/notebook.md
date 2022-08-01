@@ -17,6 +17,11 @@
   <em>, <strong>
   ```
 
+### Lists
+  ```
+  <ol> (ordenada), <ul> (ñ ordenada), <li>
+  ```
+
 ## Structure
 
 
@@ -49,3 +54,15 @@
 | color | cor do texto |
 | padding | espaçamento |
 | margin | espaçamento |
+
+
+# Bonus
+
+## Times de front-end
+
+### Designer UX e UI
+ Reponsável por criar interfaces
+
+### Front end developer
+  Programa as interfaces
+
