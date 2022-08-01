@@ -11,8 +11,12 @@
 | Property | O que faz |   
 |---|---|
 | text-transformation | transformar o texto |
-| text-align | alinhamento do texto |
-| background-color | cor do background |
-| color | cor do texto |
-| padding | espaçamento |
-| margin | espaçamento |
+
+## Reset
+
+- Reset é resetar todos os estilos de html para focar somente no css, tem vários resets pela internet
+
+## Posicionamento
+
+- Absolute: Relativo ao container
+- Estático: Segue o container
