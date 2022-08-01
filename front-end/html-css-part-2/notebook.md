@@ -11,6 +11,7 @@
 | Property | O que faz |   
 |---|---|
 | text-transformation | transformar o texto |
+| border-radius | pontas da borda |
 
 ## Reset
 
@@ -25,4 +26,10 @@
 
 ``` html
 <main>, <section>, <header>, <nav>
+```
+
+## Comportamentos
+
+```css
+hover, active
 ```
