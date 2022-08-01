@@ -1,4 +1,4 @@
-## HTML
+# HTML
 
 ## Tags Semantic
 
@@ -26,6 +26,7 @@
   <head> <-- Informações -->
     <meta charset="UTF-8">
     <title>TÍTULO DA PÁGINA</title>
+    <link rel="stylesheet" href="url">
   </head>
   <body> <-- Conteúdo -->
 
@@ -33,3 +34,16 @@
 
 </html>
 ```
+
+# CSS
+
+## Properties
+
+### Text
+
+| Property | O que faz |   
+|---|---|
+| font-size | tamanho da fonte |
+| text-align | alinhamento do texto |
+| background-color | cor do background |
+| color | cor do texto |
