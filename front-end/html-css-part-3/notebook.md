@@ -49,3 +49,15 @@ p {
 }
 
 ```
+
+## Table
+
+``` html
+<table>
+<thead>
+<th>
+<tbody>
+<tfoot>
+<tr>
+<td>
+```
