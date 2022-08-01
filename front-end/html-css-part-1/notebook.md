@@ -47,3 +47,5 @@
 | text-align | alinhamento do texto |
 | background-color | cor do background |
 | color | cor do texto |
+| padding | espaçamento |
+| margin | espaçamento |
