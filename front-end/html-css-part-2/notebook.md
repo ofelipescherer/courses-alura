@@ -20,3 +20,9 @@
 
 - Absolute: Relativo ao container
 - Estático: Segue o container
+
+## Tags semânticas
+
+``` html
+<main>, <section>, <header>, <nav>
+```
