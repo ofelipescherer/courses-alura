@@ -41,3 +41,19 @@ after: Depois
 ``~`` seleciona todos os elementos do elemento
 
 ``:not()`` exclui uma propriedade
+
+## Calc
+
+``calc()``
+
+## Mobile
+
+```html
+<meta name="viewport" content="width=device-width">
+```
+
+```css
+@media screen and (max-width: 480px) {
+  property: value
+}
+```
