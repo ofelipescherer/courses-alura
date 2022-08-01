@@ -23,3 +23,21 @@ last-child: Ultimo filho
 nth-child(n): Qualquer elemento
 
 nth-child(2n): Qualquer elemento par
+
+first-letter: Primeira letra
+
+first-line: Primeira linha
+
+before: Antes
+
+after: Depois
+
+## Selectors
+
+``>`` seleciona somento os filhos daquele elemento
+
+``+`` o elemento que vem apos ao elemento
+
+``~`` seleciona todos os elementos do elemento
+
+``:not()`` exclui uma propriedade
