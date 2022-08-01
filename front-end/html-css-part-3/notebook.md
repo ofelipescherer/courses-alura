@@ -4,6 +4,19 @@
 <form>, <input #id>, <label for="">, <input type="submit">, <textarea>, <input type="radio">, <input type="checkbox">, <select>, <option>
 ```
 
+## Input types
+
+``` html
+<input type="email">
+<input type="tel">
+<input type="number">
+<input type="password">
+<input type="date">
+<input type="datetime">
+<input type="month">
+<input type="search">
+```
+
 ## CSS Hierarquia
 
 inline = 1000
