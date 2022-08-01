@@ -1,7 +1,17 @@
 ## Form
 
 ``` html
-<form>, <input #id>, <label for="">, <input type="submit">, <textarea>, <input type="radio">, <input type="checkbox">, <select>, <option>
+<form>
+<input #id placeholder="">
+<label for="">
+<input type="submit">
+<textarea>
+<input type="radio">
+<input type="checkbox">
+<select>
+<option>
+<fieldset>
+<legend>
 ```
 
 ## Input types
